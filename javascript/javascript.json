@@ -1,0 +1,32 @@
+{
+	"Async Test": {
+        "prefix": "mcasyncdescribe",
+        "body": [
+			"describe('${1:description}', function() {",
+			"\tit('${2:testDescription}', function(done) {",
+			"\t\tvar callback = function(value) {",
+			"\t\t\texpect(value).to.be.eql(23);",
+			"\t\t\tdone();",
+			"\t\t};",
+			"\t\t${3:funtcionToTest}(${4:paramValue}, callback);",
+			"\t});",
+			"});"
+			
+	],
+	"description": "Async test (SUITE) with Describe"
+},
+	"Async Test simple": {
+		"prefix": "mcasyncitsingletest",
+		"body": [
+			"\tit('${2:testDescription}', function(done) {",
+			"\t\tvar callback = function(value) {",
+			"\t\t\texpect(value).to.be.eql(23);",
+			"\t\t\tdone();",
+			"\t\t};",
+			"\t\t${3:funtcionToTest}(${4:paramValue}, callback);",
+			"\t});"
+	],
+	"description": "Async test simple"
+	}
+}
+
